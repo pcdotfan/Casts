@@ -15,7 +15,7 @@ class Series extends Model
     protected $fillable = [
         'title', 'thumbnail', 'price', 'discount', 'slug'
     ];
-    public function posts()
+    public function courses()
     {
         return $this->hasMany(Course::class);
     }
