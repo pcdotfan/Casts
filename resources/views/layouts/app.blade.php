@@ -70,6 +70,7 @@
                 </div>
             </nav>
         </header>
+        @yield('series-introduction');
         <main class="tm-main uk-block uk-block-default uk-container uk-container-center">
             @yield('content')
         </main>

@@ -1,19 +1,46 @@
-@extends('layouts.app') @section('content')
-<div class="uk-grid pk-grid-large">
-    <div class="pk-width-content">
-        <div class="uk-panel-box uk-panel">
-            <div class="uk-panel-heading">
-                <h3 class="panel-title uk-text-center">Forum</h3></div>
-            <div class="panel-body">
+@extends('layouts.app') @push('script-extensions')
+<script type="text/javascript" src="/assets/js/uikit/components/grid.min.js"></script>
+@endpush @section('series-introduction')
+<section id="tm-hero" class="tm-hero uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast" style="background-image: url('/assets/images/home-hero.jpg');">
+    <div class="uk-conta iner uk-container-center">
+        <section class="uk-grid uk-grid-match" data-uk-grid-margin="">
+            <div class="uk-width-medium-1-1 uk-row-first">
+                <div class="uk-panel  uk-text-center ">
+                    <h1 class="uk-heading-large uk-margin-large-bottom">Hello, I'm Pagekit,<br class="uk-hidden-small"> your new favorite CMS.</h1>
+                    <a class="uk-button uk-button-large" href="http://www.pagekit.com">Get started</a>
+                </div>
             </div>
+        </section>
+    </div>
+</section>
+@endsection @section('content')
+<div class="uk-grid uk-grid-medium uk-grid-match uk-grid-width-small-1-2 uk-grid-width-xlarge-1-3">
+    <div class="uk-grid-margin uk-row-first">
+        <div class="uk-panel uk-panel-box uk-overlay-hover">
+            <div class="uk-panel-teaser">
+                <div class="uk-overlay uk-display-block">
+                    <div class="uk-cover-background uk-position-cover" style="background-image: url(&quot;https://downloads-pagekit.storage.googleapis.com/tomekknapczyk/sitemap/image.png&quot;);"></div>
+                    <canvas class="uk-responsive-width uk-display-block" width="1200" height="800"></canvas>
+                    <div class="uk-overlay-panel uk-overlay-background pk-overlay-background uk-overlay-fade"></div>
+                </div>
+            </div>
+            <h2 class="uk-panel-title uk-margin-remove">Sitemap</h2>
+            <p class="uk-text-muted uk-margin-remove">Tomek Knapczyk</p>
+            <a class="uk-position-cover"></a>
         </div>
     </div>
-    <div class="pk-width-sidebar">
-        <div class="uk-panel-box uk-panel">
-            <div class="uk-panel-heading">
-                <h3 class="panel-title uk-text-center">Forum</h3></div>
-            <div class="panel-body">
+    <div class="uk-grid-margin">
+        <div class="uk-panel uk-panel-box uk-overlay-hover">
+            <div class="uk-panel-teaser">
+                <div class="uk-overlay uk-display-block">
+                    <div class="uk-cover-background uk-position-cover" style="background-image: url(&quot;https://downloads-pagekit.storage.googleapis.com/bixie/pk-framework/image.png&quot;);"></div>
+                    <canvas class="uk-responsive-width uk-display-block" width="1200" height="800"></canvas>
+                    <div class="uk-overlay-panel uk-overlay-background pk-overlay-background uk-overlay-fade"></div>
+                </div>
             </div>
+            <h2 class="uk-panel-title uk-margin-remove">Bixie Framework</h2>
+            <p class="uk-text-muted uk-margin-remove">Bixie</p>
+            <a class="uk-position-cover"></a>
         </div>
     </div>
 </div>
