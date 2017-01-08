@@ -22,9 +22,8 @@ class SeriesController extends Controller
      * @param  App\Topic                $topic
      * @return Illuminate\Http\Response
      */
-    public function show ($slug)
+    public function show (Series $series)
     {
-        $series = Series::where('slug', $slug)->first();
         $courses = $series->courses()->get();
 
         return view('series.show', [

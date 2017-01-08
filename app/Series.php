@@ -15,6 +15,17 @@ class Series extends Model
     protected $fillable = [
         'title', 'thumbnail', 'price', 'discount', 'slug'
     ];
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function courses()
     {
         return $this->hasMany(Course::class);

@@ -21,7 +21,7 @@
         <div class="uk-panel uk-panel-box uk-overlay-hover">
             <div class="uk-panel-teaser">
                 <div class="uk-overlay uk-display-block">
-                    <div class="uk-cover-background uk-position-cover" style="background-image: url('{{ $course->thumbnail }}');"></div>
+                    <div class="uk-cover-background uk-position-cover" style="background-image: url('/storage/{{ $course->thumbnail }}');"></div>
                     <canvas class="uk-responsive-width uk-display-block" width="1200" height="800"></canvas>
                     <div class="uk-overlay-panel uk-overlay-background pk-overlay-background uk-overlay-fade"></div>
                 </div>
