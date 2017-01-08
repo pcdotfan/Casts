@@ -167,6 +167,9 @@ return [
          * Package Service Providers...
          */
 
+        DevDojo\Chatter\ChatterServiceProvider::class,
+        TCG\Voyager\VoyagerServiceProvider::class,
+
         //
 
         /*

@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+Auth::routes();
+
+Route::group(['prefix' => 'series'], function () {
+	Route::get('/', 'SeriesController@index');
+	Route::get('/{slug}', 'SeriesController@show');
+	Route::get('/{slug}/episodes/{id}', 'CourseController@show');
+});
+
+Route::get('/home', 'HomeController@index');

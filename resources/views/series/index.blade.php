@@ -1,8 +1,18 @@
-@extends('layouts.app') 
-@push('script-extensions')
-    <script type="text/javascript" src="/assets/js/uikit/components/grid.min.js"></script>
-@endpush
-@section('content')
+@extends('layouts.app') @push('script-extensions')
+<script type="text/javascript" src="/assets/js/uikit/components/grid.min.js"></script>
+@endpush @section('content')
+<div id="tm-hero" class="tm-hero uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast" style="background-image: url('/assets/images/home-hero.jpg');">
+    <div class="uk-container uk-container-center">
+        <section class="uk-grid uk-grid-match" data-uk-grid-margin="">
+            <div class="uk-width-medium-1-1 uk-row-first">
+                <div class="uk-panel  uk-text-center ">
+                    <h1 class="uk-heading-large uk-margin-large-bottom">Hello, I'm Pagekit,<br class="uk-hidden-small"> your new favorite CMS.</h1>
+                    <a class="uk-button uk-button-large" href="http://www.pagekit.com">Get started</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 <div class="uk-grid pk-grid-large">
     <div class="uk-width-5-6 uk-container-center">
         <div class="uk-panel-box uk-panel">
