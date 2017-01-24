@@ -169,6 +169,7 @@ return [
 
         DevDojo\Chatter\ChatterServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         //
 
@@ -180,6 +181,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
+        Jrean\UserVerification\UserVerificationServiceProvider::class
 
     ],
 
@@ -228,6 +232,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Active' => HieuLe\Active\Facades\Active::class,
+        'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class
 
     ],
 

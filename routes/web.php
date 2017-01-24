@@ -25,7 +25,7 @@ Auth::routes();
 Route::group(['prefix' => 'series'], function () {
 	Route::get('/', 'SeriesController@index');
 	Route::get('/{series}', 'SeriesController@show');
-	Route::get('/{series}/episodes/{id}', 'CourseController@show');
+	Route::get('/{series}/episodes/{id}', 'CoursesController@show')->name('series.course.show');
 });
 
 Route::get('/home', 'HomeController@index');

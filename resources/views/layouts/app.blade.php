@@ -11,8 +11,9 @@
     <!-- Styles -->
     <link href="/assets/css/theme.css" rel="stylesheet">
     <link href="/assets/css/font-awesome.css" rel="stylesheet">
-    <!-- Scripts -->
     @stack('style-extensions')
+    <!-- Scripts -->
+    
 </head>
 
 <body>
@@ -62,8 +63,45 @@
                     <div class="tm-contrast">
                         <ul class="uk-navbar-nav github-login socialite-login">
                             @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                                <li><a href="{{ url('/login') }}">Login</a></li>
+                                <li><a href="{{ url('/register') }}">Register</a></li>
+                            @else
+                                <li class="uk-parent" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+                                    <a href=""><img class="uk-border-circle uk-margin-small-right" width="32" height="32" alt="{{ Auth::user()->name }}" src="{{ Gravatar::get(Auth::user()->email) }}">{{ Auth::user()->name }} <span class="caret"></span></a>
+
+                                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" aria-hidden="true">
+                                        <ul class="uk-nav uk-nav-navbar">
+                                            @if (Auth::user()->role === 'admin')
+                                                <li><a href="/profile">
+                                                    <span class="uk-icon-user-secret"></span>
+                                                    个人资料</a></li>
+                                            @endif
+                                            @if (Auth::user()->is_premium === true)
+                                                <li><a href="/vip">已订阅会员</a></li>
+                                            @endif
+                                            <li><a href="/account">
+                                                <span class="uk-icon-cogs"></span>
+                                                账户设置
+                                                </a>
+                                            </li>
+                                            <li><a href="/favorite">
+                                                <span class="uk-icon-heart"></span>
+                                                收藏列表</a></li>
+                                            <li>
+                                                <a href="{{ url('/logout') }}"
+                                                    onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                    <span class="uk-icon-sign-out"></span>
+                                                    登出
+                                                </a>
+
+                                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
                             @endif
                         </ul>
                     </div>

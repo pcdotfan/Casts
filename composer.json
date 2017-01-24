@@ -10,7 +10,12 @@
         "devdojo/chatter": "dev-master",
         "jellybool/translug": "^1.0",
         "caouecs/laravel-lang": "~3.0",
-        "tcg/voyager": "dev-master"
+        "tcg/voyager": "dev-master",
+        "creativeorange/gravatar": "^1.0",
+        "laracasts/flash": "^2.0",
+        "hieu-le/active": "^3.3",
+        "barryvdh/laravel-debugbar": "^2.3",
+        "jrean/laravel-user-verification": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -15,6 +15,7 @@ class Course extends Model
     protected $fillable = [
         'title', 'thumbnail', 'origin',
     ];
+    
     public function series()
     {
         return $this->belongsTo(Series::class);
